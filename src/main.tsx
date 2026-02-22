@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createWeb3Modal } from "@web3modal/wagmi/react";
-import { config, chains } from "./wagmi.ts";
+import { config } from "./wagmi.ts";
 
 const queryClient = new QueryClient();
 
