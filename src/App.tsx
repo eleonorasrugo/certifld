@@ -46,7 +46,7 @@ function App() {
                 className="top-bar"
               >
                 <p className="top-bar-text">Have your funds been stolen?</p>
-                <a href="#" className="top-bar-wrapper w-inline-block">
+                {/* <a href="#" className="top-bar-wrapper w-inline-block">
                   <img
                     loading="lazy"
                     src="https://cdn.prod.website-files.com/60a41ae959fbb36bd6808d6e/680b1a86f194766848f69e09_alert-triangle.svg"
@@ -54,7 +54,7 @@ function App() {
                     className="alert-image"
                   />
                   <div>Request help</div>
-                </a>
+                </a> */}
                 <div id="closeButton" className="top-bar-close-icon-wrapper">
                   <img
                     loading="lazy"
@@ -652,7 +652,7 @@ function App() {
                       data-w-id="e99fb635-5951-106b-31de-042fdfa89351"
                       className="vertical-divider header-divider"
                     ></div>
-                    <a
+                    {/* <a
                       data-w-id="e99fb635-5951-106b-31de-042fdfa89352"
                       href="/"
                       className="button-primary header-button btn-request-a-demo w-inline-block"
@@ -673,8 +673,8 @@ function App() {
                           strokeLinejoin="round"
                         ></path>
                       </svg>
-                    </a>
-                    <a
+                    </a> */}
+                    {/* <a
                       data-w-id="e99fb635-5951-106b-31de-042fdfa89357"
                       href="#"
                       className="button-primary header-button btn-report-a-fraud w-inline-block"
@@ -707,7 +707,7 @@ function App() {
                           className="color-neutral-100"
                         ></path>
                       </svg>
-                    </a>
+                    </a> */}
                   </div>
                 </nav>
                 <div className="menu-button v2 w-nav-button">
@@ -754,7 +754,7 @@ function App() {
                     to get your money back.
                   </p>
                 </div>
-                <a
+                {/* <a
                   data-w-id="da97b38d-66f2-9f34-393b-f119d7744288"
                   href="/"
                   target="_blank"
@@ -776,7 +776,7 @@ function App() {
                       strokeLinejoin="round"
                     ></path>
                   </svg>
-                </a>
+                </a> */}
                 <a
                   data-w-id="da97b38d-66f2-9f34-393b-f119d7744288"
                   href="/scan"
@@ -906,7 +906,7 @@ function App() {
               </div>
             </div>
             <div className="text-center">
-              <a
+              {/* <a
                 data-w-id="02314fcc-c498-97f1-d2ba-f6ec408dcd58"
                 href="/app/index.html"
                 target="_blank"
@@ -928,7 +928,7 @@ function App() {
                     strokeLinejoin="round"
                   ></path>
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
@@ -1737,18 +1737,18 @@ function App() {
                 <a href="#" className="footer-link v2">
                   Support
                 </a>
-                <a href="#" className="footer-link v2 btn-request-a-demo">
+                {/* <a href="#" className="footer-link v2 btn-request-a-demo">
                   Get Started
-                </a>
+                </a> */}
                 <a href="#" className="footer-link v2">
                   Press
                 </a>
                 <a href="#" className="footer-link v2">
                   Careers
                 </a>
-                <a href="#" className="footer-link v2">
+                {/* <a href="#" className="footer-link v2">
                   Report a Fraud
-                </a>
+                </a> */}
               </div>
               <div
                 id="w-node-_1fbd5104-a45e-f3d7-170f-1c7656bf352c-56bf34d7"
