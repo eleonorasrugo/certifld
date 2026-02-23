@@ -116,9 +116,9 @@ function App() {
 
             <div
               data-w-id="6c03cfde-ca96-87a7-0af7-2ee7b3f30d7d"
-              className="header-container-wrapper"
+              className="mx-auto header-container-wrapper"
             >
-              <div className="header-container">
+              <div className="mx-auto header-container">
                 <a
                   href="/"
                   data-w-id="6219a93f-1559-9e8d-07bc-7eb01c612da9"
