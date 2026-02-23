@@ -1,8 +1,287 @@
+/* ─── Reset Vite defaults ─────────────────────────────────────────── */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
+/* ─── Header centering ───────────────────────────────────────────── */
+.header-container-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
 
+.header-container {
+  display: flex !important;
+  align-items: center !important;
+  max-width: 1280px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+/* ─── Mobile nav overlay ─────────────────────────────────────────── */
+.mobile-nav-open .w-nav-menu {
+  display: flex !important;
+  flex-direction: column !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+  background: #fff !important;
+  z-index: 9999 !important;
+  padding: 80px 24px 32px !important;
+  overflow-y: auto !important;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ─── Hamburger button ───────────────────────────────────────────── */
+.nav-hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10000;
+  position: relative;
+}
+
+.nav-hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #1e3a5f;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* ─── TABLET (≤ 991px) ───────────────────────────────────────────── */
+@media (max-width: 991px) {
+  /* Show hamburger, hide desktop nav */
+  .nav-hamburger-btn {
+    display: block !important;
+  }
+
+  /* Hide the full nav by default on mobile */
+  .nav-menu.w-nav-menu {
+    display: none !important;
+  }
+
+  /* Mobile open state */
+  .mobile-nav-open .nav-menu.w-nav-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: #fff !important;
+    z-index: 9999 !important;
+    padding: 80px 24px 40px !important;
+    overflow-y: auto !important;
+  }
+
+  .mobile-nav-open .flex-left-nav,
+  .mobile-nav-open .flex-menu-right {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .mobile-nav-open .nav-dropdown,
+  .mobile-nav-open .menu-item {
+    width: 100% !important;
+  }
+
+  /* Hero */
+  .hero-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 40px !important;
+  }
+
+  .hero-image-relative {
+    width: 100% !important;
+    max-width: 560px !important;
+  }
+
+  .hero-main-image {
+    width: 100% !important;
+    border-radius: 16px !important;
+  }
+
+  /* Section spacing */
+  .py-150px {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+  .pb-210px {
+    padding-bottom: 80px !important;
+  }
+
+  /* Stats grid */
+  .grid-numbers-v2 {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* Quote flex → stack */
+  .flex-quote {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  /* Footer grids */
+  .grid-footer-top {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .grid-footer-middle {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+  }
+
+  .grid-footer-bottom {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .flex-wrapper-social-icons {
+    justify-content: flex-start !important;
+    gap: 16px !important;
+  }
+
+  /* Newsletter */
+  .newsletter-input-wrapper .form-input-wrapper {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+}
+
+/* ─── MOBILE (≤ 767px) ───────────────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Container padding */
+  .container-default {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 3-col grid → 1 col */
+  .grid-3-cols,
+  .grid-3-cols.gap-24px {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* 2-col grids → 1 col */
+  .grid-2-col---16px {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Stats: 1 col on smallest screens */
+  .grid-numbers-v2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer middle → single col */
+  .grid-footer-middle {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Heading sizes */
+  .heading-title {
+    font-size: clamp(28px, 7vw, 44px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .ht-2 {
+    font-size: clamp(24px, 6vw, 36px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .h2-title-44px-white {
+    font-size: clamp(24px, 6vw, 36px) !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Increase section: stack */
+  .increase-section {
+    flex-direction: column !important;
+    gap: 32px !important;
+    padding: 40px 20px !important;
+    border-radius: 16px !important;
+  }
+
+  .max-width-770px,
+  .max-width-585px,
+  .max-width-574px,
+  .max-width-513px,
+  .max-width-509px,
+  .max-width-584px {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Slider cards */
+  .card-v2.card-slider {
+    flex-direction: column !important;
+  }
+
+  /* Quote section: larger padding */
+  .card-quote {
+    padding: 24px !important;
+  }
+
+  /* Hero button full-width */
+  .button-primary.btn-request-a-demo {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Header CTA button */
+  .header-button {
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+
+  /* Section spacing tighter on mobile */
+  .section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  .py-150px {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  .pb-210px {
+    padding-bottom: 60px !important;
+  }
+}
+
+/* ─── Small mobile (≤ 480px) ─────────────────────────────────────── */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 16px !important;
+  }
+
+  .number-font {
+    font-size: clamp(36px, 10vw, 56px) !important;
+  }
+
+  .footer-bottom-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .divider-footer-bottom {
+    display: none !important;
+  }
+}

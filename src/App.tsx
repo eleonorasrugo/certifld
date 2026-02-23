@@ -1,6 +1,8 @@
-﻿import "./App.css";
+﻿import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   return (
     <>
       <div className="w-embed w-iframe">
@@ -116,9 +118,26 @@ function App() {
 
             <div
               data-w-id="6c03cfde-ca96-87a7-0af7-2ee7b3f30d7d"
-              className="mx-auto header-container-wrapper"
+              className={`header-container-wrapper${mobileNavOpen ? " mobile-nav-open" : ""}`}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+              }}
             >
-              <div className="mx-auto header-container">
+              <div
+                className="header-container"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  maxWidth: "1280px",
+                  width: "100%",
+                  margin: "0 auto",
+                  padding: "0 24px",
+                }}
+              >
                 <a
                   href="/"
                   data-w-id="6219a93f-1559-9e8d-07bc-7eb01c612da9"
@@ -133,7 +152,14 @@ function App() {
                 </a>
                 <nav
                   role="navigation"
-                  className="nav-menu nav-menu-v3 left-menu w-nav-menu"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    width: "100%",
+                    position: "static",
+                  }}
+                  className="nav-menu nav-menu-v3 w-nav-menu"
                 >
                   <div className="flex-left-nav">
                     <a
@@ -648,10 +674,7 @@ function App() {
                         ></path>
                       </svg>
                     </a>
-                    <div
-                      data-w-id="e99fb635-5951-106b-31de-042fdfa89351"
-                      className="vertical-divider header-divider"
-                    ></div>
+
                     {/* <a
                       data-w-id="e99fb635-5951-106b-31de-042fdfa89352"
                       href="/"
@@ -710,13 +733,27 @@ function App() {
                     </a> */}
                   </div>
                 </nav>
-                <div className="menu-button v2 w-nav-button">
-                  <div className="hamburger-menu">
-                    <div className="top-line-hamburger-menu"></div>
-                    <div className="middle-line-hamburger-menu"></div>
-                    <div className="bottom-line-hamburger-menu"></div>
-                  </div>
-                </div>
+                <button
+                  className="nav-hamburger-btn"
+                  aria-label="Toggle navigation"
+                  onClick={() => setMobileNavOpen((v) => !v)}
+                >
+                  <span
+                    style={
+                      mobileNavOpen
+                        ? { transform: "rotate(45deg) translate(5px, 5px)" }
+                        : {}
+                    }
+                  />
+                  <span style={mobileNavOpen ? { opacity: 0 } : {}} />
+                  <span
+                    style={
+                      mobileNavOpen
+                        ? { transform: "rotate(-45deg) translate(5px, -5px)" }
+                        : {}
+                    }
+                  />
+                </button>
               </div>
             </div>
           </div>
